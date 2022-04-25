@@ -70,3 +70,28 @@ h1,h2{
         column-count:2;
         
     }
+#result{
+    display: none;
+    width: 100%;
+    padding: 20px 0;
+
+}
+
+.underweight{
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.labelresult{
+    width: 40%;
+    margin: 10px 0;
+    font-weight: bold;
+    padding: 0;
+
+}
+.resultvalue{
+    width: 40%;
+    margin: 10px 0;
+    padding: 0;
+}

@@ -31,7 +31,30 @@
       <h3 style="text-align: center; margin: 2rem auto;">Patient Info</h3>
       <div class="container">
 
-        
+        <div id ="result">
+            <div class="underweight">
+                <div class="labelresult">
+                  Underweight
+                </div>
+                <div id="uw" class="resultvalue">
+
+                </div>
+            </div>
+            <div class="underweight">
+              <div class="labelresult">
+                Stunting
+              </div>
+              <div id="stunt" class="resultvalue"></div>
+            </div>
+            <div class="underweight">
+              <div class="labelresult">
+                Wasted
+              </div>
+              <div id="waste" class="resultvalue">
+
+              </div>
+            </div>
+        </div>
         <form>
           <div class="form-group">
             <label for="altitude">House Altitude</label>
@@ -110,9 +133,9 @@
             var tablets = $('#tablets').val();
             var systolic = $('#systolic').val();
             var diastolic = $('#diastolic').val();
-            if(alt!="" && diastolic!="" ){
+            if(alt!="" && diastolic!="" && births!=""){
               $.ajax({
-                url: "",
+                url: "http://localhost:8000/malapiapp/predict",
                 type: "POST",
                 data: {
                   v040: alt,
@@ -128,15 +151,16 @@
                 },
                 cache: false,
                 success: function(dataResult){
-                  var dataResult = JSON.parse(dataResult);
-                  if(dataResult.statusCode==200){
-                    
-                    $('#result').html('Analysis successful !'); 						
-                  }
-                  else if(dataResult.statusCode==201){
-                    $("#error").show();
-                    $('#error').html('Email ID already exists !');
-                  }
+                  console.log(dataResult)
+                  // var dataResult = JSON.parse(dataResult);
+                  
+
+                  document.getElementById("result").style.display = "block";
+                    $('#uw').html(dataResult.underweight); 			
+                    $('#stunt').html(dataResult.stunting); 	
+                    $('#waste').html(dataResult.wasted); 				
+
+
                   
                 }
               });
