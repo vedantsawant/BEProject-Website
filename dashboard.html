@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMIN DASHBOARD</title>
+    <title>BE PROJECT WEBSITE</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/stylesdash.css">
@@ -17,20 +17,59 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="collapse navbar-collapse">
           <div class="navbar-header">
-            <a class="navbar-brand" href="dashboard.html"><h2>BE Project</h2></a>
+            <a class="navbar-brand" href="dashboard.html"><h2>BE PROJECT</h2></a>
           </div>
           <ul id= "sections"class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item"><a class="nav-link" href="dashboard.html">HOME</a></li>
-            <li class="nav-item"><a class="nav-link" href="survey.html">SURVEY</a></li>
+            <li style="padding-top: 0; padding-left: 1rem;" class="nav-item"><a class="nav-link" href="dashboard.html">HOME</a></li>
+            <li style="padding-top: 0; padding-left: 1rem;" class="nav-item"><a class="nav-link" href="survey.html">SURVEY</a></li>
           </ul>
         </div>
       </nav>
-      <h2 style="text-align: center; margin: 2rem auto;"> WELCOME! </h2>
+      <h1 style="text-align: center; margin: 2rem auto;"> Predict & Diagnose Malnutrition Among Children in India</h1>
       
       
 
       <div class="container">
 
+        <h2 style="text-align: center; margin: 2rem auto;">PROBLEM STATEMENT</h2>
+        <div id="compare1" class="basic-1">
+          <div class="container">
+              <div class="row">
+                  <div>
+                    Malnutrition and Anemia are some of the prime causes of infant mortality among various developing countries such as India. Our study aims to identify the most important features available in the Indian Demographic and Health Survey (IDHS) dataset and design a prognostic model for diagnosing malnutrition using these key features. Demographic and Health Checks (DHS) are conducted every 5 years nationwide, supplying data for an extensive range of tracking, monitoring, and evaluating pointers in the areas of nutrition, health, and population. In this project, we have taken the machine learning approach to identify the various features influencing malnutrition and have correlated its association to anemia, which has not been linked to existent literature yet. We have also identified the degree to which these features influence malnutrition, and have targeted location-specific features for the children living in various Indian states. We observe the effect on the 4 dependent variables provided by WHO
+                        <ul>
+                          <li>BMI (Body Mass Index)</li>
+                          <li>HAZ (Height for Age z score)</li>
+                          <li>WAZ (Weight for Age z score) </li>
+                          <li>WHZ (Weight for Height z score)</li>
+                        </ul>
+                  </div>  
+              </div> 
+          </div> 
+        </div>
+
+        <h2 style="text-align: center; margin: 2rem auto;">METHODOLOGY</h2>
+        <div id="compare1" class="basic-1">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-5">
+                    <ol>
+                      <li>Fit 329 features in a Random Forest regression model</li>
+                      <li>Find the importance of each feature using Mean Decrease in Impurity</li>
+                      <li>Select the top 200 features based on feature importance and fit these again to find the top 150 features</li>
+                      <li>Repeat until we find the top 20 and top 10 features for the output variables</li>
+                    </ol>
+                  </div> 
+                  <div class="col-lg-7">
+                      <div style="align-content: right;" class="image-container">
+                          <img class="img-fluid" src="images/method.png" alt="Anemia v/s altitude">
+                      </div>
+                  </div> 
+              </div> 
+          </div> 
+        </div>
+
+        <h2 style="text-align: center; margin: 2rem auto;">RESULTS</h2>
         <h3 style="text-align: center; margin: 2rem auto;">Distribution of Malnourished Children</h3>
         <div id="compare1" class="basic-1">
           <div class="container">
@@ -114,20 +153,6 @@
               </div> 
           </div> 
         </div> 
-
-           
-          <div class="card bg-light" onclick="location.href='dashboard.html';">
-            <div class="card-body text-center">
-              <h3 style="text-align: center; margin: 0.5rem auto;">Tools Used</h3>
-              <p class="card-text">Python</p>
-            </div>
-          </div> 
-          <div class="card bg-light" onclick="location.href='dashboard.html';">
-            <div class="card-body text-center">
-              <h3 style="text-align: center; margin: 0.5rem auto;">Project Team</h3>
-              <p class="card-text">Vedant</p>
-            </div>
-          </div>
           
           
           
